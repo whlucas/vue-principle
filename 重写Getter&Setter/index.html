@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <!--这个是人家的vue-->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <!--我自己模仿他写一个Due-->
+        <script src="Due.js"></script>
+        <script>
+            // 这是人家的vue
+
+            // let module;
+            // window.onload = function() {
+            //     module = new Vue({
+            //         el: "#test",
+            //         data: {
+            //             x: 1,
+            //             y: 2
+            //         }
+            //     });
+            // }
+
+            // 这个是我自己写的Due
+            let module;
+            window.onload = function() {
+                module = new Due({
+                    el: "test",
+                    data: {
+                        x: {
+                          a: 1,
+                          b: 2
+                        },
+                        y: 2,
+                        z: 3
+                    }
+                })
+            }
+        </script>
+    </head>
+    <body>
+        <div id="test">
+            <div>x的值为: {{x}}</div>
+            <div>y的值为: {{y}}</div>
+        </div>
+
+        <script>
+            // 通过这样可以直接修改数据值
+            // module.x = 3;
+        </script>
+    </body>
+</html>
